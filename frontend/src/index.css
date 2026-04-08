@@ -1,0 +1,116 @@
+:root {
+  --fc-primary: #198754;
+  --fc-primary-hover: #157347;
+  --fc-secondary: #6c757d;
+  --fc-light: #f8f9fa;
+  --fc-dark: #212529;
+  --fc-border: #dee2e6;
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--fc-light);
+  color: var(--fc-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Styling */
+.header-title {
+  letter-spacing: -0.5px;
+}
+
+/* Animations and Transitions */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Product Card Customizations */
+.product-card {
+  border-radius: 1rem !important;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.add-to-cart-btn {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(25, 135, 84, 0.2);
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(25, 135, 84, 0.3);
+}
+
+/* Category Sidebar Links */
+.hover-bg-light:hover {
+  background-color: #f1f3f5;
+  color: #212529 !important;
+}
+
+/* Navbar Customizations */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  z-index: 1030;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--fc-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fc-light); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; 
+}
+
+/* Utility Overrides for Bootstrap */
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+.rounded-5 {
+  border-radius: 1.5rem !important;
+}
